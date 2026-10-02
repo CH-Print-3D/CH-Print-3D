@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CH-Print-3D | 3D-Druck nach Wunsch</title>
+
+  <meta name="description" content="CH-Print-3D – individuelle 3D-Drucke nach Wunsch.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f1115;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #151820;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #292d36;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #4da3ff;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #4da3ff;
+    }
+
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 20px;
+      background:
+        radial-gradient(circle at top, #18304d 0%, #0f1115 55%);
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 8vw, 72px);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #4da3ff;
+    }
+
+    .hero p {
+      color: #c7cbd3;
+      font-size: 20px;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #4da3ff;
+      color: #ffffff;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      background: #268be8;
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 75px 6%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .section-intro {
+      text-align: center;
+      color: #aeb4bf;
+      max-width: 650px;
+      margin: 0 auto 45px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: #181b22;
+      border: 1px solid #292d36;
+      border-radius: 14px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .card-icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .card p {
+      color: #aeb4bf;
+    }
+
+    .about {
+      background: #151820;
+      max-width: none;
+    }
+
+    .about-inner {
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-inner p {
+      color: #c7cbd3;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .gallery-box {
+      min-height: 220px;
+      border-radius: 14px;
+      background: #181b22;
+      border: 1px dashed #454b57;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #858c98;
+      padding: 20px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact-box {
+      background: #181b22;
+      border: 1px solid #292d36;
+      border-radius: 14px;
+      padding: 40px 25px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .contact-box p {
+      color: #c7cbd3;
+      margin-bottom: 25px;
+    }
+
+    footer {
+      background: #090b0f;
+      border-top: 1px solid #292d36;
+      text-align: center;
+      padding: 25px;
+      color: #777e89;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        display: none;
+      }
+
+      .cards,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 75vh;
+      }
+
+      section {
+        padding: 60px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">CH-Print-3D</div>
+
+    <nav>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#projekte">Projekte</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-content">
+
+        <h1>
+          Deine Idee.<br>
+          <span>Unser 3D-Druck.</span>
+        </h1>
+
+        <p>
+          Individuelle 3D-Drucke nach deinen Vorstellungen –
+          von kleinen Einzelstücken bis hin zu besonderen Projekten.
+        </p>
+
+        <a class="button" href="#kontakt">
+          Projekt anfragen
+        </a>
+
+      </div>
+    </section>
+
+
+    <section id="leistungen">
+
+      <h2>Was wir anbieten</h2>
+
+      <p class="section-intro">
+        Du hast eine Idee oder ein fertiges 3D-Modell?
+        Wir unterstützen dich bei der Umsetzung.
+      </p>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="card-icon">🖨️</div>
+          <h3>3D-Druck</h3>
+          <p>
+            Individuelle Modelle und Bauteile nach deinen
+            Vorstellungen und Anforderungen.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">💡</div>
+          <h3>Individuelle Projekte</h3>
+          <p>
+            Du hast eine eigene Idee?
+            Gemeinsam finden wir eine passende Lösung.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🛠️</div>
+          <h3>Einzelstücke</h3>
+          <p>
+            Besondere Einzelanfertigungen und persönliche
+            Projekte – individuell gefertigt.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="about" id="ueber-uns">
+
+      <div class="about-inner">
+
+        <h2>Über CH-Print-3D</h2>
+
+        <p>
+          Willkommen bei CH-Print-3D!
+        </p>
+
+        <p>
+          Wir beschäftigen uns mit der Herstellung individueller
+          3D-Drucke und möchten deine Ideen Wirklichkeit werden lassen.
+        </p>
+
+        <p>
+          Egal ob du bereits eine fertige Datei hast oder erst
+          eine Idee im Kopf – sprich uns einfach an.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section id="projekte">
+
+      <h2>Unsere Projekte</h2>
+
+      <p class="section-intro">
+        Hier werden später Bilder unserer gedruckten Projekte
+        zu sehen sein.
+      </p>
+
+      <div class="gallery">
+
+        <div class="gallery-box">
+          Hier kommt später<br>dein erstes Bild hin
+        </div>
+
+        <div class="gallery-box">
+          Hier kommt später<br>dein zweites Bild hin
+        </div>
+
+        <div class="gallery-box">
+          Hier kommt später<br>dein drittes Bild hin
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="contact" id="kontakt">
+
+      <h2>Kontakt</h2>
+
+      <p class="section-intro">
+        Du hast eine Idee oder möchtest etwas individuell
+        drucken lassen? Schreib uns gerne.
+      </p>
+
+      <div class="contact-box">
+
+        <p>
+          Wir freuen uns auf deine Anfrage.
+        </p>
+
+        <!-- HIER SPÄTER E-MAIL ODER KONTAKTDATEN EINTRAGEN -->
+
+        <a class="button" href="mailto:DEINE-EMAIL@BEISPIEL.DE">
+          E-Mail schreiben
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    © 2026 CH-Print-3D – Alle Rechte vorbehalten.
+  </footer>
+
+</body>
+</html>
